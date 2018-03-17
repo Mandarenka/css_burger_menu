@@ -83,3 +83,78 @@ $pesticide-debug-depth: false;
 // $Shame
 // ==========================================================================
 @import 'shame';
+
+
+header{
+	height: 80px;
+	background-color: #327A95;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+input{
+	width: 40px;
+	height: 40px;
+	display: none;
+}
+
+label{
+	align-self: end;
+	margin: 20px;
+}
+
+.menu ul{
+	list-style: none;
+	background-color: #327A95;
+	padding: 0px;
+	margin: 0px;
+}
+
+.menu a{
+	color: #FFFFFF;
+	width: 100%;
+	text-align: center;
+}
+
+.menu li{
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.menu li:hover{
+	background-color: #FFC104;
+}
+
+.menu{
+	display: none;
+	margin-top: -5px;
+}
+
+input[type="checkbox"]:checked ~ div{
+	display: block;
+	border-top: 1px solid #fff;
+}
+
+
+input[type="checkbox"] + label:before{
+	//content: url("../burger.png");
+	content: url("../img/burger.png");
+	position: relative;
+}
+
+input[type="checkbox"] + label:hover:before{
+	content: url("../img/burger_hover.png");
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before{
+	content: url("../img/close.png");
+	position: relative;
+}
+
+input[type="checkbox"]:checked + label:hover:before{
+	content: url("../img/close_hover.png");
+	cursor: pointer;
+}
